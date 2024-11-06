@@ -1,4 +1,4 @@
-package com.example.motus_order.dto;
+package com.example.motus_order.produto;
 
 import lombok.Data;
 

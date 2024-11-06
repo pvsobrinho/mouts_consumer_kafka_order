@@ -1,6 +1,6 @@
 package com.example.motus_order.config;
 
-import com.example.motus_order.dto.ProdutoRequest;
+import com.example.motus_order.produto.ProdutoRequest;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
@@ -31,8 +31,8 @@ public class KafkaConsumerConfig {
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "order-group");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
-        props.put(JsonDeserializer.TRUSTED_PACKAGES, "com.example.motus_order.dto");
-        props.put(JsonDeserializer.VALUE_DEFAULT_TYPE, "com.example.motus_order.dto.ProdutoRequest");
+        props.put(JsonDeserializer.TRUSTED_PACKAGES, "com.example.motus_order.produto");
+        props.put(JsonDeserializer.VALUE_DEFAULT_TYPE, "com.example.motus_order.produto.ProdutoRequest");
         props.put(JsonDeserializer.USE_TYPE_INFO_HEADERS, false);
 
         return new DefaultKafkaConsumerFactory<>(props);

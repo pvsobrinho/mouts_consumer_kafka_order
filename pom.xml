@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <version>${spring-boot.version}</version>
+            <version>3.3.5</version>
         </dependency>
 
         <!-- Spring Kafka -->
@@ -41,8 +41,11 @@
             <version>2.17.2</version>
         </dependency>
 
-
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <version>3.3.5</version>
+        </dependency>
 
 
         <!-- Lombok (Opcional) -->
