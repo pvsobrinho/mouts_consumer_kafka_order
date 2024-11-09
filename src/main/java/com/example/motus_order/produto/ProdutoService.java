@@ -34,13 +34,11 @@ public class ProdutoService {
                 .collect(Collectors.toList());
     }
 
+    public boolean existsById(String id) {
+        return produtoRepository.existsById(id);
+    }
 
     public ProdutoRequest saveProduct(ProdutoRequest produtoRequest) {
-        // Verifica se o produto já existe no banco de dados pelo ID ou outro campo único
-        if (produtoRepository.existsById(produtoRequest.getId())) {
-            System.out.println("Produto " + produtoRequest.getId() + " já existe na base de dados, não será salvo novamente.");
-            return produtoRequest;
-        }
 
         // Converte ProdutoRequest em Produto antes de salvar
         Produto produto = new Produto();
